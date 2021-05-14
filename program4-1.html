@@ -5,21 +5,7 @@
     	<meta charset="UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<title>Week 4 Assignment - Add Two Numbers Program</title>
-			<link rel="stylesheet" href="css/style.css">
-		<script>
-			
-			function addNumbers() {
-	//INPUT
-	 let x = parseFloat(document.getElementById('number1').value);
-	 let y = parseFloat(document.getElementById('number2').value);
-	//PROCESSING
-	 let sum = x + y;
-	//OUTPUT	
-	document.getElementById('output').innerHTML = "The sum of " + x + " and " + y + " equals " + sum + "!";
-}
-
-		</script>
-		
+			<link rel="stylesheet" href="css/style.css">		
 	</head>
 
 	<body>
@@ -29,18 +15,26 @@
 		</header>
 		<main>
 			<h3>Add Two Numbers</h3>
-			<label>Enter Input One: <input type="text" id="input1"></label>
-			<label>Enter Input Two: <input type="text" id="input2"></label>
-			<label><button onclick="functionname()">Start the Program</button></label>
-			<hr>
-			<p id="output"></p>
+			<label>Enter Input One: <input type="text" id="number1"></label>
+			<label>Enter Input Two: <input type="text" id="number2"></label><br />
+			<button onclick="addNumbers()">Add Numbers</button>
+			<hr />
+			<div id="sum"></p>
 		</main>
 		<footer>
 			&copy;2021 &bull; Obalana Oluwatimilehin Michael &bull; BYU-Idaho &bull; CIT 160
 		</footer>
 
-		<script>
-
+		<script>	
+			function addNumbers() {
+			//INPUT x and y
+			 let x = parseFloat(document.getElementById('number1').value);
+			 let y = parseFloat(document.getElementById('number2').value);
+			//PROCESSING - sum is x + y
+			 let sum = x + y;
+			//OUTPUT	
+			document.getElementById('sum').innerHTML = "The sum of " + x + " and " + y + " equals " + sum + "!";
+}
 		</script>
 	</body>
 
